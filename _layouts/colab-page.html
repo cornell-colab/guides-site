@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include colab-head.html %}
+  </head>
+  <body class="home-body">
+    <main>
+      <div class="row">
+        <div id="main" class="center-content">
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+          </div>
+        <div class="sidebar-left">
+          <aside class="toc-box">
+            <h3>Table of Contents</h3>
+            <nav id="toc-nav"></nav>
+          </aside>
+        </div>
+      </div>
+    </main>
+    {% include js/toc-js.html %}
+  </body>
+  {% include colab-footer.html %}
+</html>

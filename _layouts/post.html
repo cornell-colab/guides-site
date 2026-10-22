@@ -1,0 +1,10 @@
+---
+layout: colab-default
+nav-exclude: true
+---
+{{ content }}
+<div class="categories">
+  {% for category in page.categories %}
+    <a href="/category/{{ category }}"><h2>{{ category }}</a>
+  {% endfor %}
+</div>

@@ -1,0 +1,22 @@
+---
+layout: colab-default
+nav-exclude: true
+---
+
+<h1>Posts in Category: {{ page.title }}</h1>
+
+<div class="flex-inner">
+{% for post in page.posts %}
+<div class="card">
+  <img src="{{ post.img }}" style="width:100%">
+  <div class="card-container">
+     <a href="{{ post.url }}">{{ post.title }}</a>
+     <div class="categories">
+      {% for category in post.categories %}
+        <a href="/category/{{ category }}">category: {{ category }}</a>
+      {% endfor %}
+     </div>
+  </div>
+</div>
+{% endfor %}
+</div>
